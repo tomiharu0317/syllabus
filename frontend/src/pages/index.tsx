@@ -13,9 +13,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className='pt-3 font-bold text-red-100'>
           Learn <a href='https://nextjs.org'>Next.js!</a>
         </h1>
+        <button className='bg-indigo-700 text-black py-2 px-6'>ボタン</button>
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
