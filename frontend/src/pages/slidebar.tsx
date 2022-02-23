@@ -54,8 +54,7 @@ export default function Example() {
     <>
       <div className='relative bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 ' aria-label='Top'>
-          <div className='flex h-full'></div>
-          <div className='flex h-screen'>
+          <div className='flex h-full'>
             <Transition.Root show={sidebarOpen} as={Fragment}>
               <Dialog
                 as='div'
@@ -146,50 +145,49 @@ export default function Example() {
             </Transition.Root>
 
             {/* Static sidebar for desktop */}
-            <div className='hidden  lg:flex lg:w-64'>
-              {/* Sidebar component, swap this element with another sidebar if you like */}
-              <div className='flex flex-col w-64 flex-grow border-r border-gray-200 pt-5 bg-white overflow-y-auto'>
-                {/* <div className='flex items-center flex-shrink-0 px-4'>
-              <img
-                className='h-8 w-auto'
-                src='https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg'
-                alt='Workflow'
-              />
-            </div> */}
-                <div className='mt-5 flex-grow flex flex-col'>
-                  <nav className='flex-1 pb-4 space-y-1'>
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-100 text-gray-900'
-                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                          'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
-                        )}
-                      >
-                        <item.icon
-                          className={classNames(
-                            item.current
-                              ? 'text-gray-500'
-                              : 'text-gray-400 group-hover:text-gray-500',
-                            'mr-3 flex-shrink-0 h-6 w-6',
-                          )}
-                          aria-hidden='true'
-                        />
-                        {item.name}
-                      </a>
-                    ))}
-                  </nav>
+            {/* sidebar を固定する ------------------------- */}
+            <div className='flex-col lg:border-r lg:border-gray-200 '>
+              <div className='sticky top-0 z-50'>
+                {/* ------------------------------------------- */}
+                <div className='hidden lg:flex lg:w-64 '>
+                  {/* Sidebar component, swap this element with another sidebar if you like */}
+                  <div className='flex flex-col w-64 flex-grow pt-5 bg-white overflow-y-auto'>
+                    <div className='mt-5 flex-grow flex flex-col'>
+                      <nav className='flex-1 pb-4 space-y-1'>
+                        {navigation.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className={classNames(
+                              item.current
+                                ? 'bg-gray-100 text-gray-900'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                              'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
+                            )}
+                          >
+                            <item.icon
+                              className={classNames(
+                                item.current
+                                  ? 'text-gray-500'
+                                  : 'text-gray-400 group-hover:text-gray-500',
+                                'mr-3 flex-shrink-0 h-6 w-6',
+                              )}
+                              aria-hidden='true'
+                            />
+                            {item.name}
+                          </a>
+                        ))}
+                      </nav>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className='flex flex-col flex-1'>
-              <div className='sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white shadow'>
+              <div className='sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white border-b-2 border-gray-100'>
                 <button
                   type='button'
-                  className='px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden'
+                  className='px-4 border-r border-gray-200 text-gray-500 focus:outline-none lg:hidden'
                   onClick={() => setSidebarOpen(true)}
                 >
                   <span className='sr-only'>Open sidebar</span>
@@ -214,21 +212,31 @@ export default function Example() {
                         />
                       </div>
                     </form>
-                  </div>{' '}
+                  </div>
                 </div>
               </div>
 
-              <main className='flex-1'>
-                <div className='py-6'>
-                  <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
-                    <h1 className='text-2xl font-semibold text-gray-900'>Dashboard</h1>
-                  </div>
-                  <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
-                    {/* Replace with your content */}
-                    <div className='py-4'>
-                      <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
+              <main className='flex flex-col w-full justfy-end bg-white overflow-x-hidden overflow-y-auto mb-14'>
+                <div className='flex w-full mx-auto px-6 py-8'>
+                  <div className='flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed'>
+                    {/* <main className='flex-1'> */}
+                    {/* <div className='py-6'> */}
+                    <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
+                      <h1 className='text-2xl font-semibold text-gray-900'>Dashboard</h1>
                     </div>
-                    {/* /End replace */}
+                    <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
+                      {/* Replace with your content */}
+                      <div className='py-4'>
+                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
+                      </div>
+                      <div className='py-4'>
+                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
+                      </div>
+                      <div className='py-4'>
+                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
+                      </div>
+                      {/* /End replace */}
+                    </div>
                   </div>
                 </div>
               </main>
