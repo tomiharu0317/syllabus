@@ -25,7 +25,7 @@ export default function Example() {
               {/* Sidebar component, swap this element with another sidebar if you like */}
 
               {/* この部分の解析 */}
-              <div className='flex flex-col w-80 flex-grow border-r border-gray-200 pt-5 bg-white overflow-y-auto'>
+              <div className='flex flex-col w-64 flex-grow border-r border-gray-200 pt-5 bg-white overflow-y-auto'>
                 {/* <div className='flex items-center flex-shrink-0 px-4'>
             <img
               className='h-8 w-auto'
