@@ -10,9 +10,11 @@ export default function Layout({ children }: any) {
           @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
         </style>
       </Head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <body className='flex flex-col min-h-screen'>
+        <Header />
+        <main className='flex-grow'>{children}</main>
+        <Footer />
+      </body>
     </>
   )
 }
