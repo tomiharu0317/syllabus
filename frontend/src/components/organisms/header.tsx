@@ -3,9 +3,9 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <div className='relative bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 ' aria-label='Top'>
-        <div className='w-full py-6 flex items-center justify-between border-b-2 border-gray-100'>
-          <div className='flex items-center px-2 lg:px-0'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6' aria-label='Top'>
+        <div className='flex justify-between items-center border-b-2 border-gray-100 py-6'>
+          <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href={'/'}>
               <a>
                 <span className='sr-only'>Home</span>
