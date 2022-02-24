@@ -5,16 +5,11 @@ import Head from 'next/head'
 export default function Layout({ children }: any) {
   return (
     <>
-      <Head>
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-        </style>
-      </Head>
-      <body className='flex flex-col min-h-screen'>
+      <div className='flex flex-col min-h-screen'>
         <Header />
-        <main className='flex-grow'>{children}</main>
+        <main className='flex-1'>{children}</main>
         <Footer />
-      </body>
+      </div>
     </>
   )
 }
