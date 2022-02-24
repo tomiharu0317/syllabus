@@ -1,5 +1,6 @@
 import Breadcrumb from '../molecules/breadcrumbs'
 import Pagination from '../atoms/pagination'
+import Sidebar from './sidebar'
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -104,7 +105,7 @@ export default function Dashboard() {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex-shrink-0 flex items-center px-4'>
+                    {/* <div className='flex-shrink-0 flex items-center px-4'>
                       <img
                         className='h-8 w-auto'
                         src='https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg'
@@ -137,7 +138,8 @@ export default function Dashboard() {
                           </a>
                         ))}
                       </nav>
-                    </div>
+                    </div> */}
+                    <Sidebar />
                   </div>
                 </Transition.Child>
                 <div className='flex-shrink-0 w-14' aria-hidden='true'>
@@ -153,7 +155,7 @@ export default function Dashboard() {
                 {/* ------------------------------------------- */}
                 <div className='hidden lg:flex lg:w-64 '>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className='flex flex-col w-64 flex-grow pt-5 bg-white overflow-y-auto'>
+                  {/* <div className='flex flex-col w-64 flex-grow pt-5 bg-white overflow-y-auto'>
                     <div className='mt-5 flex-grow flex flex-col'>
                       <nav className='flex-1 pb-4 space-y-1'>
                         {navigation.map((item) => (
@@ -181,7 +183,8 @@ export default function Dashboard() {
                         ))}
                       </nav>
                     </div>
-                  </div>
+                  </div> */}
+                  <Sidebar />
                 </div>
               </div>
             </div>
