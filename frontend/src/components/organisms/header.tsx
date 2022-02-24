@@ -28,6 +28,8 @@ export default function Header() {
               </a>
             </Link>
           </div>
+
+          {/* FIXME mylistのsvgをhoverした時にマイリストと表示される */}
           <div className='ml-10 space-x-4'>
             <div className='flex items-center justify-end'>
               <Link href={'mylist'}>
