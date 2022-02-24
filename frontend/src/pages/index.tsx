@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import SearchForm from '@/components/molecules/search-form'
 
 const Home: NextPage = () => {
