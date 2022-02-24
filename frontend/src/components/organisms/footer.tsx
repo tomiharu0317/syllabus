@@ -3,7 +3,6 @@ import Link from 'next/link'
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
   main: [
-    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'FAQ', href: '/FAQ' },
     { name: 'contact', href: '/contact' },
@@ -12,8 +11,8 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className='bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6'>
+    <footer className=' bg-white'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6' aria-label='Footer'>
         <div className='w-full mt-8 border-t border-gray-200  md:flex md:items-center md:justify-between'></div>
         <div className='max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
           <nav className='-mx-5 -my-2 flex flex-wrap justify-center' aria-label='Footer'>
@@ -25,7 +24,7 @@ export default function Footer() {
               </div>
             ))}
           </nav>
-          <p className='mt-8 text-center text-base text-gray-400'>
+          <p className='mt-8 text-center text-xs md:text-base text-gray-400'>
             &copy; 2022 tomiharu0317. All rights reserved.
           </p>
         </div>
