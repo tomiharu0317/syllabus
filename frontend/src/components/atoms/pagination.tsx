@@ -3,7 +3,7 @@ import { ArrowNarrowLeftIcon, ArrowNarrowRightIcon } from '@heroicons/react/soli
 
 export default function Pagination() {
   return (
-    <nav className='border-t border-gray-200 px-4 flex items-center justify-center sm:px-0'>
+    <nav className='px-4 mt-8 flex items-center justify-center sm:px-0'>
       <div className='-mt-px w-0 flex-1 flex items-center justify-center'>
         <a
           href='#'
