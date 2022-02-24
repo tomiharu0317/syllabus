@@ -1,3 +1,4 @@
+import Checkbox from '../atoms/checkbox'
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from '@headlessui/react'
 import {
@@ -10,7 +11,7 @@ import {
 } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Dashboard', icon: HomeIcon, current: true, href: '#' },
+  { name: 'Dashboard', icon: HomeIcon, current: false, href: '#' },
   {
     name: 'Team',
     icon: UsersIcon,
@@ -114,7 +115,7 @@ export default function Sidebar() {
                       className={classNames(
                         item.current
                           ? 'bg-gray-100 text-gray-900'
-                          : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                          : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900',
                         'group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md ',
                       )}
                     >
@@ -135,7 +136,7 @@ export default function Sidebar() {
                       </svg>
                     </Disclosure.Button>
                     <Disclosure.Panel className='space-y-1'>
-                      {item.children.map((subItem) => (
+                      {/* {item.children.map((subItem) => (
                         <Disclosure.Button
                           key={subItem.name}
                           as='a'
@@ -144,7 +145,8 @@ export default function Sidebar() {
                         >
                           {subItem.name}
                         </Disclosure.Button>
-                      ))}
+                      ))} */}
+                      <Checkbox />
                     </Disclosure.Panel>
                   </>
                 )}
