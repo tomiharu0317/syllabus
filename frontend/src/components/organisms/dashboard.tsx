@@ -1,3 +1,4 @@
+import Breadcrumb from '../molecules/breadcrumbs'
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -217,6 +218,9 @@ export default function Dashboard() {
               </div>
 
               <main className='flex flex-col w-full justfy-end bg-white overflow-x-hidden overflow-y-auto mb-14'>
+                <div className='px-4'>
+                  <Breadcrumb />
+                </div>
                 <div className='flex w-full mx-auto px-6 py-8'>
                   <div className='flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed'>
                     {/* <main className='flex-1'> */}
