@@ -1,4 +1,5 @@
 import Breadcrumb from '../molecules/breadcrumbs'
+import Pagination from '../atoms/pagination'
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -242,6 +243,9 @@ export default function Dashboard() {
                       {/* /End replace */}
                     </div>
                   </div>
+                </div>
+                <div>
+                  <Pagination />
                 </div>
               </main>
             </div>
