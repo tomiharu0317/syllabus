@@ -15,7 +15,7 @@ export default function LangToggle() {
         checked={enabled}
         onChange={setEnabled}
         className={classNames(
-          enabled ? 'bg-gray-400' : 'bg-gray-400',
+          enabled ? 'bg-gray-500' : 'bg-gray-500',
           'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200',
         )}
       >
@@ -42,7 +42,7 @@ export default function LangToggle() {
                 strokeLinejoin='round'
               />
             </svg> */}
-            <span className='text-gray-600 text-xs'>JP</span>
+            <span className='text-gray-500 text-xs font-semibold'>JP</span>
           </span>
           <span
             className={classNames(
@@ -51,7 +51,7 @@ export default function LangToggle() {
             )}
             aria-hidden='true'
           >
-            <span className='text-gray-600 text-xs'>EN</span>
+            <span className='text-gray-500 text-xs font-semibold'>EN</span>
           </span>
         </span>
       </Switch>
