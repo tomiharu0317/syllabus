@@ -156,35 +156,6 @@ export default function Dashboard() {
                 {/* ------------------------------------------- */}
                 <div className='hidden lg:flex lg:w-64 '>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  {/* <div className='flex flex-col w-64 flex-grow pt-5 bg-white overflow-y-auto'>
-                    <div className='mt-5 flex-grow flex flex-col'>
-                      <nav className='flex-1 pb-4 space-y-1'>
-                        {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                              'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
-                            )}
-                          >
-                            <item.icon
-                              className={classNames(
-                                item.current
-                                  ? 'text-gray-500'
-                                  : 'text-gray-400 group-hover:text-gray-500',
-                                'mr-3 flex-shrink-0 h-6 w-6',
-                              )}
-                              aria-hidden='true'
-                            />
-                            {item.name}
-                          </a>
-                        ))}
-                      </nav>
-                    </div>
-                  </div> */}
                   <Sidebar />
                 </div>
               </div>
@@ -228,26 +199,11 @@ export default function Dashboard() {
                 </div>
                 <div className='flex w-full mx-auto px-6 py-8'>
                   <div className='flex flex-col w-full h-full text-xl'>
-                    {/* <main className='flex-1'> */}
-                    {/* <div className='py-6'> */}
-                    {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
-                      <h1 className='text-2xl font-semibold text-gray-900'>Dashboard</h1>
-                    </div> */}
                     <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
                       {/* Replace with your content */}
-                      {/* <div className='py-4'>
-                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
-                      </div>
-                      <div className='py-4'>
-                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
-                      </div>
-                      <div className='py-4'>
-                        <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
-                      </div> */}
                       <ContentCard />
                       <ContentCard />
                       <ContentCard />
-
                       {/* /End replace */}
                     </div>
                   </div>
