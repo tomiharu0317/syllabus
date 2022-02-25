@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LangToggle from '../atoms/lang-toggle'
 
 export default function Header() {
   return (
@@ -32,8 +33,9 @@ export default function Header() {
           {/* FIXME mylistのsvgをhoverした時にマイリストと表示される */}
           <div className='ml-10 space-x-4'>
             <div className='flex items-center justify-end'>
+              <LangToggle />
               <Link href={'/mylist'}>
-                <a className='whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900'>
+                <a className='whitespace-nowrap text-base ml-8 font-medium text-gray-500 hover:text-gray-900'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='h-8 w-8'
