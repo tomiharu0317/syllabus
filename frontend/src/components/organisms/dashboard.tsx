@@ -1,6 +1,7 @@
 import Breadcrumb from '../molecules/breadcrumbs'
 import Pagination from '../atoms/pagination'
 import Sidebar from './sidebar'
+import ContentCard from '../atoms/contents-card'
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -226,15 +227,15 @@ export default function Dashboard() {
                   <Breadcrumb />
                 </div>
                 <div className='flex w-full mx-auto px-6 py-8'>
-                  <div className='flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed'>
+                  <div className='flex flex-col w-full h-full text-xl'>
                     {/* <main className='flex-1'> */}
                     {/* <div className='py-6'> */}
-                    <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
+                    {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
                       <h1 className='text-2xl font-semibold text-gray-900'>Dashboard</h1>
-                    </div>
+                    </div> */}
                     <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
                       {/* Replace with your content */}
-                      <div className='py-4'>
+                      {/* <div className='py-4'>
                         <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
                       </div>
                       <div className='py-4'>
@@ -242,7 +243,11 @@ export default function Dashboard() {
                       </div>
                       <div className='py-4'>
                         <div className='border-4 border-dashed border-gray-200 rounded-lg h-96' />
-                      </div>
+                      </div> */}
+                      <ContentCard />
+                      <ContentCard />
+                      <ContentCard />
+
                       {/* /End replace */}
                     </div>
                   </div>

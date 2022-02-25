@@ -25,7 +25,7 @@ export default function Checkbox() {
             aria-describedby='comments-description'
             name='comments'
             type='checkbox'
-            className='focus:ring-red-700 h-4 w-4 text-red-700 border-gray-300 rounded'
+            className='accent-red-700 focus:ring-red-700 h-4 w-4 text-red-700 border-gray-300 rounded'
           />
         </div>
         <div className='ml-3 text-sm'>
@@ -44,7 +44,7 @@ export default function Checkbox() {
             aria-describedby='candidates-description'
             name='candidates'
             type='checkbox'
-            className='focus:ring-red-700 h-4 w-4 text-red-700 border-gray-300 rounded'
+            className='accent-red-700 focus:ring-red-700 h-4 w-4 text-red-700 border-gray-300 rounded'
           />
         </div>
         <div className='ml-3 text-sm'>
@@ -63,7 +63,7 @@ export default function Checkbox() {
             aria-describedby='offers-description'
             name='offers'
             type='checkbox'
-            className='focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded'
+            className='accent-red-700 focus:ring-red-700 h-4 w-4 text-red-700 border-gray-300 rounded'
           />
         </div>
         <div className='ml-3 text-sm'>
