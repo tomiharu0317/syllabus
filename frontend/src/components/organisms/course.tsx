@@ -1,7 +1,6 @@
+import Link from 'next/link'
 import Breadcrumb from '../molecules/breadcrumbs'
-import ContentCard from '../atoms/contents-card'
 /* This example requires Tailwind CSS v2.0+ */
-import { PaperClipIcon } from '@heroicons/react/solid'
 
 export default function Course() {
   return (
@@ -20,12 +19,15 @@ export default function Course() {
             </p> */}
               </div>
               <div className='ml-4 mt-4 flex-shrink-0'>
-                <button
-                  type='button'
-                  className='relative inline-flex items-center px-4 py-2 mr-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200'
-                >
-                  Back
-                </button>
+                <Link href={'/mylist'}>
+                  <button
+                    type='button'
+                    className='relative inline-flex items-center px-4 py-2 mr-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200'
+                  >
+                    Back
+                  </button>
+                </Link>
+
                 <button
                   type='button'
                   className='relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'
