@@ -5,7 +5,7 @@ import { PaperClipIcon } from '@heroicons/react/solid'
 export default function ContentCard() {
   return (
     <div className='bg-white shadow overflow-hidden sm:rounded-lg my-2'>
-      <div className='px-4 py-5 sm:px-6'>
+      <div className='px-4 py-5 sm:px-6 whitespace-nowrap'>
         <div className='-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap'>
           <div className='ml-4 mt-4'>
             <h3 className='text-lg leading-6 font-medium text-gray-900'>Course Name</h3>
