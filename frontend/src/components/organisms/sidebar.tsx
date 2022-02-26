@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Dashboard', icon: HomeIcon, current: false, href: '#' },
+  // { name: 'Dashboard', icon: HomeIcon, current: false, href: '#' },
   {
     name: 'Team',
     icon: UsersIcon,
@@ -75,16 +75,28 @@ function classNames(...classes: any) {
 
 export default function Sidebar() {
   return (
-    <div className='flex flex-col flex-grow  pt-5 pb-4 bg-white overflow-y-auto'>
-      {/* <div className='flex items-center flex-shrink-0 px-4'>
-        <img
-          className='h-8 w-auto'
-          src='https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg'
-          alt='Workflow'
-        />
+    <div className='flex flex-col flex-grow pt-5 pb-4 overflow-y-auto bg-white'>
+      {/* <div className='flex items-center flex-shrink-0 px-2'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='w-10 h-10 stroke-gray-400'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke=''
+        >
+          <path d='M12 14l9-5-9-5-9 5 9 5z' />
+          <path d='M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z' />
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222'
+          />
+        </svg>
+        <p className='pl-2 text-lg font-semibold text-gray-400'>Waseda Syllabus</p>
       </div> */}
-      <div className='mt-5 flex-grow flex flex-col'>
-        <nav className='flex-1 px-2 lg:pl-0 space-y-1 bg-white' aria-label='Sidebar'>
+      <div className='flex flex-col flex-grow mt-5'>
+        <nav className='flex-1 px-2 space-y-1 bg-white lg:pl-0' aria-label='Sidebar'>
           {navigation.map((item) =>
             !item.children ? (
               <div key={item.name}>
@@ -120,7 +132,7 @@ export default function Sidebar() {
                       )}
                     >
                       <item.icon
-                        className='mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500'
+                        className='flex-shrink-0 w-6 h-6 mr-3 text-gray-400 group-hover:text-gray-500'
                         aria-hidden='true'
                       />
                       <span className='flex-1'>{item.name}</span>
@@ -141,7 +153,7 @@ export default function Sidebar() {
                           key={subItem.name}
                           as='a'
                           href={subItem.href}
-                          className='group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50'
+                          className='flex items-center w-full py-2 pr-2 text-sm font-medium text-gray-600 rounded-md group pl-11 hover:text-gray-900 hover:bg-gray-50'
                         >
                           {subItem.name}
                         </Disclosure.Button>

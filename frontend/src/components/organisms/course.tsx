@@ -5,24 +5,24 @@ import Breadcrumb from '../molecules/breadcrumbs'
 export default function Course() {
   return (
     <div>
-      <div className='max-w-7xl mx-auto pl-6 sm:pl-8'>
+      <div className='pl-6 mx-auto max-w-7xl sm:pl-8'>
         <Breadcrumb />
       </div>
-      <div className='max-w-5xl mx-auto px-4 sm:px-6 my-8' aria-label='CourseDetails'>
-        <div className='bg-whiteoverflow-hidden sm:rounded-lg my-2'>
+      <div className='max-w-5xl px-4 mx-auto my-8 sm:px-6' aria-label='CourseDetails'>
+        <div className='my-2 bg-whiteoverflow-hidden sm:rounded-lg'>
           <div className='px-4 py-5 sm:px-6'>
-            <div className='-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap'>
-              <div className='ml-4 mt-4'>
-                <h3 className='text-lg leading-6 font-medium text-gray-900'>Course Name</h3>
+            <div className='flex flex-wrap items-center justify-between -mt-4 -ml-4 sm:flex-nowrap'>
+              <div className='mt-4 ml-4'>
+                <h3 className='text-lg font-medium leading-6 text-gray-900'>Course Name</h3>
                 {/* <p className='mt-1 text-sm text-gray-500'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit quam corrupti consectetur.
             </p> */}
               </div>
-              <div className='ml-4 mt-4 flex-shrink-0'>
+              <div className='flex-shrink-0 mt-4 ml-4'>
                 <Link href={'/mylist'}>
                   <button
                     type='button'
-                    className='relative inline-flex items-center px-4 py-2 mr-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200'
+                    className='mr-2 text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
                   >
                     Back
                   </button>
@@ -30,14 +30,14 @@ export default function Course() {
 
                 <button
                   type='button'
-                  className='relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'
+                  className='text-white bg-red-700 border border-transparent hover:bg-red-600 focus:ring-red-700 btn'
                 >
                   Add to List
                 </button>
               </div>
             </div>
           </div>
-          <div className='border-t border-gray-200 px-4 py-5 sm:px-6'>
+          <div className='px-4 py-5 border-t border-gray-200 sm:px-6'>
             <dl className='grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2'>
               <div className='sm:col-span-1'>
                 <dt className='text-sm font-medium text-gray-500'>Full name</dt>
@@ -104,7 +104,7 @@ export default function Course() {
             <Link href={'/mylist'}>
               <button
                 type='button'
-                className='relative inline-flex items-center px-4 py-2 mr-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200'
+                className='text-gray-700 bg-white border border-gray-300  hover:bg-gray-50 focus:ring-gray-200 btn'
               >
                 Back
               </button>

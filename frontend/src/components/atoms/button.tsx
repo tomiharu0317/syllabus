@@ -4,12 +4,12 @@ export default function Example() {
   return (
     <>
       <div className='flex justify-end'>
-        <div className='px-6 sm:pt-10 sm:pb-4 pt-8 pb-0 flex-shrink-0'>
-          <div className='flex jusitify-end x-auto px-4 sm:px-6 md:px-8'>
+        <div className='flex-shrink-0 px-6 pt-8 pb-0 sm:pt-10 sm:pb-4'>
+          <div className='flex px-4 jusitify-end x-auto sm:px-6 md:px-8'>
             <Link href={'/mylist/timetable'}>
               <button
                 type='button'
-                className='inline-flex px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200'
+                className='text-gray-700 bg-white border border-gray-300  hover:bg-gray-50 focus:ring-gray-200 btn'
               >
                 Time Table
               </button>

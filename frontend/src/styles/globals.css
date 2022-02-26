@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .base-container {
+    @apply px-4 py-16 mx-auto bg-white max-w-7xl sm:py-24 sm:px-6 lg:px-8;
+  }
+
+  .static-page-title {
+    @apply text-3xl font-extrabold text-center text-gray-900;
+  }
+
+  .static-page-sub-title {
+    @apply mt-4 text-lg leading-6 text-gray-500;
+  }
+
+  .no-sidebar-page-breadcrumb-container {
+    @apply pl-6 mx-auto max-w-7xl sm:pl-8;
+  }
+
+  .btn {
+    @apply relative inline-flex items-center px-4 py-2 text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+}
+
 html,
 body {
   padding: 0;
