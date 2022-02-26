@@ -2,6 +2,7 @@ import Breadcrumb from '../molecules/breadcrumbs'
 import Pagination from '../atoms/pagination'
 import Sidebar from './sidebar'
 import ContentCard from '../atoms/contents-card'
+import Button from '../atoms/button'
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -192,11 +193,13 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
+              <div className='ml-4 mt-4 flex-shrink-0'>
+                {/* <div className='flex items-center justify-betweenpx-4'> */}
+                <Breadcrumb />
+              </div>
+              <Button />
 
               <main className='flex flex-col w-full justfy-end bg-white overflow-x-hidden overflow-y-auto mb-14'>
-                <div className='px-4'>
-                  <Breadcrumb />
-                </div>
                 <div className='flex w-full mx-auto px-6 py-8'>
                   <div className='flex flex-col w-full h-full text-xl'>
                     <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
