@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .base-container {
+    @apply max-w-7xl bg-white mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8;
+  }
+
+  .static-page-title {
+    @apply text-3xl font-extrabold text-gray-900 text-center;
+  }
+
+  .static-page-sub-title {
+    @apply mt-4 text-lg leading-6 text-gray-500;
+  }
+
+  .no-sidebar-page-breadcrumb-container {
+    @apply max-w-7xl mx-auto pl-6 sm:pl-8;
+  }
+}
+
 html,
 body {
   padding: 0;
