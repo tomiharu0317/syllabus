@@ -1,6 +1,7 @@
 import { useLocale } from '@/hooks/lang/lang-locale'
 import Link from 'next/link'
 import LangToggle from '../atoms/lang-toggle'
+import LoginButton from '../atoms/login-button'
 
 export default function Header() {
   const { t } = useLocale()
@@ -55,12 +56,7 @@ export default function Header() {
                 </a>
               </Link>
 
-              <a
-                href='#'
-                className='inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-red-700 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-red-600'
-              >
-                {t.LOGIN}
-              </a>
+              <LoginButton />
             </div>
           </div>
         </div>
