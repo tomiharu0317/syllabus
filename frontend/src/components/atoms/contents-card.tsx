@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import { useLocale } from '@/hooks/lang/lang-locale'
 /* This example requires Tailwind CSS v2.0+ */
 import { PaperClipIcon } from '@heroicons/react/solid'
 
 export default function ContentCard() {
+  const { t } = useLocale()
+
   return (
     <div className='my-2 overflow-hidden bg-white shadow sm:rounded-lg'>
       <div className='px-4 py-5 sm:px-6 whitespace-nowrap'>
@@ -19,7 +22,7 @@ export default function ContentCard() {
                 type='button'
                 className='mr-2 text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
               >
-                find details
+                {t.DETAIL}
               </button>
             </Link>
 
@@ -27,7 +30,7 @@ export default function ContentCard() {
               type='button'
               className='text-white bg-red-700 border border-transparent hover:bg-red-600 focus:ring-red-700 btn'
             >
-              Add to List
+              {t.ADD_TO_LIST}
             </button>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { useLocale } from '@/hooks/lang/lang-locale'
+
 /* This example requires Tailwind CSS v2.0+ */
 const people = [
   {
@@ -40,73 +42,75 @@ const people = [
 ]
 
 export default function TimeTable() {
+  const { t } = useLocale()
+
   return (
     <div aria-aria-label='Timetable'>
       <div className='py-8'>
         <div className='max-w-3xl mx-auto text-center'>
-          <h2 className='text-2xl md:text-3xl font-bold text-red-700'>Spring Semester</h2>
+          <h2 className='text-2xl font-bold text-red-700 md:text-3xl'>{t.SPRING_SEMESTER}</h2>
         </div>
       </div>
-      <main className='flex flex-col w-full flex-shrink justfy-center bg-white overflow-x-auto'>
-        <div className='flex w-full mx-auto px-0 sm:px-6 py-8 justify-center'>
+      <main className='flex flex-col flex-shrink w-full overflow-x-auto bg-white justfy-center'>
+        <div className='flex justify-center w-full px-0 py-8 mx-auto sm:px-6'>
           <div className='flex flex-col w-full h-full'>
-            <div className='max-w-7xl mx-auto'>
+            <div className='mx-auto max-w-7xl'>
               {/* Replace with your content */}
 
               <div className='flex flex-col'>
                 <div className='-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
-                  <div className='py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8'>
-                    <div className='shadow overflow-hidden border-b border-gray-200 sm:rounded-lg'>
+                  <div className='inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8'>
+                    <div className='overflow-hidden border-b border-gray-200 shadow sm:rounded-lg'>
                       <table className='min-w-full divide-y divide-gray-200'>
                         <thead className='bg-gray-50'>
                           <tr>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Name
+                              {t.MON}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Title
+                              {t.TUE}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Email
+                              {t.WED}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Role
+                              {t.THU}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Role
+                              {t.FRI}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Role
+                              {t.SAT}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Role
+                              {t.SUN}
                             </th>
                             <th
                               scope='col'
-                              className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+                              className='px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase'
                             >
-                              Role
+                              {t.OTHERS}
                             </th>
                           </tr>
                         </thead>
@@ -116,28 +120,28 @@ export default function TimeTable() {
                               key={person.email}
                               className={personIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
                             >
-                              <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>
+                              <td className='px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap'>
                                 {person.name}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.title}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.email}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.role}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.role}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.role}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.role}
                               </td>
-                              <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-500'>
+                              <td className='px-6 py-4 text-sm text-gray-500 whitespace-nowrap'>
                                 {person.role}
                               </td>
                             </tr>
