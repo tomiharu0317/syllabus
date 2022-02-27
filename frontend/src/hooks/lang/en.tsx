@@ -4,7 +4,7 @@ export default {
 
   //   header
   LOGIN: 'Login',
-  SIGN_OUT: 'Sign Out',
+  SIGN_OUT: 'Sign out',
 
   //   breadcrumbs, header(hover)
   MYLIST: 'My List',
