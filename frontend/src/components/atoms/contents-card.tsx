@@ -18,18 +18,12 @@ export default function ContentCard() {
           </div>
           <div className='flex-shrink-0 mt-4 ml-4'>
             <Link href={'/course/sample-course'}>
-              <button
-                type='button'
-                className='mr-2 text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
-              >
+              <button type='button' className='mr-2 white-button btn'>
                 {t.DETAIL}
               </button>
             </Link>
 
-            <button
-              type='button'
-              className='text-white bg-red-700 border border-transparent hover:bg-red-600 focus:ring-red-700 btn'
-            >
+            <button type='button' className='bg-red-700 red-button btn'>
               {t.ADD_TO_LIST}
             </button>
           </div>
