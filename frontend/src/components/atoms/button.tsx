@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import { useLocale } from '@/hooks/lang/lang-locale'
+
 /* This example requires Tailwind CSS v2.0+ */
 export default function Example() {
+  const { t } = useLocale()
+
   return (
     <>
       <div className='flex justify-end'>
@@ -9,9 +13,9 @@ export default function Example() {
             <Link href={'/mylist/timetable'}>
               <button
                 type='button'
-                className='text-gray-700 bg-white border border-gray-300  hover:bg-gray-50 focus:ring-gray-200 btn'
+                className='text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
               >
-                Time Table
+                {t.TIME_TABLE}
               </button>
             </Link>
           </div>

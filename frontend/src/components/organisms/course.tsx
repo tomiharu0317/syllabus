@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import Breadcrumb from '../molecules/breadcrumbs'
+import { useLocale } from '@/hooks/lang/lang-locale'
+
 /* This example requires Tailwind CSS v2.0+ */
 
 export default function Course() {
+  const { t } = useLocale()
+
   return (
     <div>
       <div className='pl-6 mx-auto max-w-7xl sm:pl-8'>
@@ -24,7 +28,7 @@ export default function Course() {
                     type='button'
                     className='mr-2 text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
                   >
-                    Back
+                    {t.BACK}
                   </button>
                 </Link>
 
@@ -32,7 +36,7 @@ export default function Course() {
                   type='button'
                   className='text-white bg-red-700 border border-transparent hover:bg-red-600 focus:ring-red-700 btn'
                 >
-                  Add to List
+                  {t.ADD_TO_LIST}
                 </button>
               </div>
             </div>
@@ -104,9 +108,9 @@ export default function Course() {
             <Link href={'/mylist'}>
               <button
                 type='button'
-                className='text-gray-700 bg-white border border-gray-300  hover:bg-gray-50 focus:ring-gray-200 btn'
+                className='text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-gray-200 btn'
               >
-                Back
+                {t.BACK}
               </button>
             </Link>
           </div>

@@ -1,18 +1,20 @@
+import { useLocale } from '@/hooks/lang/lang-locale'
 import Link from 'next/link'
 import LangToggle from '../atoms/lang-toggle'
 
 export default function Header() {
+  const { t } = useLocale()
   return (
     <div className='relative bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6' aria-label='Top'>
-        <div className='flex justify-between items-center border-b-2 border-gray-100 py-6'>
+      <div className='px-4 mx-auto max-w-7xl sm:px-6' aria-label='Top'>
+        <div className='flex items-center justify-between py-6 border-b-2 border-gray-100'>
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href={'/'}>
               <a>
                 <span className='sr-only'>Home</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  className='h-10 w-10 '
+                  className='w-10 h-10 '
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='currentColor'
@@ -35,10 +37,10 @@ export default function Header() {
             <div className='flex items-center justify-end'>
               <LangToggle />
               <Link href={'/mylist'}>
-                <a className='whitespace-nowrap text-base ml-8 font-medium text-gray-500 hover:text-gray-900'>
+                <a className='ml-8 text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-8 w-8'
+                    className='w-8 h-8'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -55,9 +57,9 @@ export default function Header() {
 
               <a
                 href='#'
-                className='ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-700 hover:bg-red-600'
+                className='inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-red-700 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-red-600'
               >
-                Login
+                {t.LOGIN}
               </a>
             </div>
           </div>
