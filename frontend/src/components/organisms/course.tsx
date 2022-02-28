@@ -1,16 +1,21 @@
 import Link from 'next/link'
-import Breadcrumb from '../molecules/breadcrumbs'
 import { useLocale } from '@/hooks/lang/lang-locale'
+import { BreadcrumbProps } from 'types/breadcrumbs'
+import Breadcrumb from '../molecules/breadcrumbs'
 
 /* This example requires Tailwind CSS v2.0+ */
 
 export default function Course() {
   const { t } = useLocale()
+  const pages = [
+    { name: t.SEARCH_RESULT, href: '/search', current: false },
+    { name: 'course-name', href: '/search', current: true },
+  ]
 
   return (
     <div>
       <div className='pl-6 mx-auto max-w-7xl sm:pl-8'>
-        <Breadcrumb />
+        <Breadcrumb pages={pages} />
       </div>
       <div className='max-w-5xl px-4 mx-auto my-8 sm:px-6' aria-label='CourseDetails'>
         <div className='my-2 bg-whiteoverflow-hidden sm:rounded-lg'>

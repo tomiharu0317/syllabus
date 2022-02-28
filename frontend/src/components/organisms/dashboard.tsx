@@ -4,6 +4,8 @@ import Pagination from '../atoms/pagination'
 import Sidebar from './sidebar'
 import ContentCard from '../atoms/contents-card'
 import Button from '../atoms/button'
+import { BreadcrumbProps } from 'types/breadcrumbs'
+
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -53,7 +55,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Dashboard() {
+export default function Dashboard({ pages }: BreadcrumbProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { t } = useLocale()
 
@@ -197,9 +199,9 @@ export default function Dashboard() {
               </div>
               <div className='flex-shrink-0 mt-4 ml-4'>
                 {/* <div className='flex items-center justify-betweenpx-4'> */}
-                <Breadcrumb />
+                <Breadcrumb pages={pages} />
               </div>
-              <Button />
+              {/* {props.isMylist && <Button />} */}
 
               <main className='flex flex-col w-full overflow-x-hidden overflow-y-auto bg-white justfy-end mb-14'>
                 <div className='flex w-full px-6 py-8 mx-auto'>

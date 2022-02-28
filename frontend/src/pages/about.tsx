@@ -1,14 +1,15 @@
 import type { NextPage } from 'next'
 import Breadcrumb from '@/components/molecules/breadcrumbs'
 
-const About: NextPage = () => {
-  return (
-    <div>
-      <Breadcrumb />
-      <AboutMe />
-    </div>
-  )
-}
+// const About: NextPage = () => {
+
+//   return (
+//     <div>
+//       <Breadcrumb />
+//       <AboutMe />
+//     </div>
+//   )
+// }
 
 /* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from '@heroicons/react/outline'
@@ -57,10 +58,12 @@ const features = [
 ]
 
 export default function AboutMe() {
+  const pages = [{ name: 'about', href: '/about', current: true }]
+
   return (
     <div>
       <div className='no-sidebar-page-breadcrumb-container'>
-        <Breadcrumb />
+        <Breadcrumb pages={pages} />
       </div>
 
       <div className='base-container'>
@@ -75,10 +78,10 @@ export default function AboutMe() {
           {features.map((feature) => (
             <div key={feature.name} className='relative'>
               <dt>
-                <CheckIcon className='absolute h-6 w-6 text-green-500' aria-hidden='true' />
-                <p className='ml-9 text-lg leading-6 font-medium text-gray-900'>{feature.name}</p>
+                <CheckIcon className='absolute w-6 h-6 text-green-500' aria-hidden='true' />
+                <p className='text-lg font-medium leading-6 text-gray-900 ml-9'>{feature.name}</p>
               </dt>
-              <dd className='mt-2 ml-9 text-base text-gray-500'>{feature.description}</dd>
+              <dd className='mt-2 text-base text-gray-500 ml-9'>{feature.description}</dd>
             </div>
           ))}
         </dl>
