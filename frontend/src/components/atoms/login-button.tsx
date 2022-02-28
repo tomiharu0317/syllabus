@@ -1,9 +1,12 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 import { useLocale } from '@/hooks/lang/lang-locale'
+import { useRouter } from 'next/router'
+// import { useSingOut } from '@/hooks/useSignOut'
 
 export default function LoginButton() {
   const { data: session } = useSession()
   const { t } = useLocale()
+  const router = useRouter()
 
   if (session) {
     return (
