@@ -1,4 +1,5 @@
 import { useLocale } from '@/hooks/lang/lang-locale'
+import { useRouter } from 'next/router'
 import Breadcrumb from '../molecules/breadcrumbs'
 import Pagination from '../atoms/pagination'
 import Sidebar from './sidebar'
@@ -57,6 +58,7 @@ function classNames(...classes: any) {
 
 export default function Dashboard({ pages }: BreadcrumbProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const router = useRouter()
   const { t } = useLocale()
 
   return (
@@ -201,7 +203,9 @@ export default function Dashboard({ pages }: BreadcrumbProps) {
                 {/* <div className='flex items-center justify-betweenpx-4'> */}
                 <Breadcrumb pages={pages} />
               </div>
-              {/* {props.isMylist && <Button />} */}
+
+              {/* マイリストのページなら時間割ボタンを表示 */}
+              {router.pathname === '/mylist' && <Button />}
 
               <main className='flex flex-col w-full overflow-x-hidden overflow-y-auto bg-white justfy-end mb-14'>
                 <div className='flex w-full px-6 py-8 mx-auto'>
