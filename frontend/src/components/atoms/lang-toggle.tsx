@@ -15,15 +15,22 @@ export default function LangToggle() {
   const router = useRouter()
   const { t } = useLocale()
 
+  const changeLocale = () => {
+    setEnabled(!enabled)
+
+    if (enabled) {
+      router.push(router.asPath, router.asPath, { locale: 'ja' })
+    } else {
+      router.push(router.asPath, router.asPath, { locale: 'en' })
+    }
+  }
+
   return (
     <div>
       <div className='h-6'>
         <Switch
           checked={enabled}
-          onChange={setEnabled}
-          // onClick={() => {
-          //   router.push(router.asPath, router.asPath, { locale: 'ja' })
-          // }}
+          onChange={changeLocale}
           className={classNames(
             enabled ? 'bg-gray-500' : 'bg-gray-500',
             'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200',
